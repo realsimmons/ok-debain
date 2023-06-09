@@ -5,7 +5,7 @@ RUN wget https://github.com/novnc/noVNC/archive/refs/tags/v1.2.0.tar.gz
 RUN tar -xvf v1.2.0.tar.gz
 RUN mkdir  /root/.vnc
 RUN echo 'uncleluo' | vncpasswd -f > /root/.vnc/passwd
-RUN chmod 60000 /root/.vnc/passwd
+RUN chmod 600 /root/.vnc/passwd
 RUN cp /noVNC-1.2.0/vnc.html /noVNC-1.2.0/index.html
 RUN echo 'cd /root' >>/luo.sh
 RUN echo "su root -l -c 'vncserver :2000 ' "  >>/luo.sh
